@@ -1,0 +1,61 @@
+/* Design System Tokens - Abhyaas ERP */
+:root {
+    /* Colors - Brand & UI (Luxury Light Mode) */
+    --color-bg: #fdfdfd;
+    --color-surface: #ffffff;
+    --color-surface-alt: #f1f5f9;
+    --color-border: #eef2f6;
+    
+    --color-accent: #3730a3;
+    --color-accent-dim: #e0e7ff;
+    --color-accent-hover: #312e81;
+    
+    --color-success: #059669;
+    --color-danger: #e11d48;
+    --color-warning: #f59e0b;
+    
+    --color-text: #0f172a;
+    --color-text-muted: #475569;
+    --color-text-faint: #94a3b8;
+
+    /* Spacing & Borders */
+    --radius-sm: 8px;
+    --radius-md: 12px;
+    --radius-lg: 16px;
+    --radius-xl: 24px;
+    
+    --shadow-soft: 0 4px 20px -5px rgba(0, 0, 0, 0.05);
+    --shadow-lg: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+}
+
+/* Luxury Dark Mode Tokens */
+[data-theme='dark'] {
+    --color-bg: #0b0f19;
+    --color-surface: #151b28;
+    --color-surface-alt: #1e293b;
+    --color-border: #2d3748;
+    
+    --color-accent: #818cf8;
+    --color-accent-dim: rgba(129, 140, 248, 0.08);
+    --color-accent-hover: #a5b4fc;
+    
+    --color-text: #f8fafc;
+    --color-text-muted: #94a3b8;
+    --color-text-faint: #64748b;
+    
+    --shadow-soft: 0 10px 30px -10px rgba(0, 0, 0, 0.5);
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: var(--color-bg);
+    color: var(--color-text);
+    font-family: 'Inter', -apple-system, sans-serif;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Global Transition for dark mode toggle */
+* {
+    transition: border-color 0.2s ease, background-color 0.2s ease, box-shadow 0.2s ease;
+}

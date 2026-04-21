@@ -1,0 +1,148 @@
+/*
+  Global UI Theme for School Management System
+  Framework: Tailwind CSS Base + Components
+*/
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+    body {
+        @apply bg-background text-textMain font-sans antialiased;
+    }
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        @apply font-bold text-textMain;
+    }
+}
+
+@layer components {
+
+    /* Layout */
+    .app-layout {
+        @apply flex min-h-screen w-full;
+    }
+
+    .main-content {
+        @apply flex-1 p-4 md:p-8 md:ml-[250px] transition-all duration-300;
+    }
+
+    /* Sidebar */
+    .sidebar {
+        @apply w-[250px] h-screen bg-white shadow-soft fixed left-0 top-0 z-40 p-6 flex flex-col transition-transform duration-300 transform -translate-x-full md:translate-x-0;
+    }
+
+    .nav-item {
+        @apply flex items-center px-4 py-3 text-textMuted rounded-sms mb-2 font-medium transition-colors hover:bg-primary/10 hover:text-primary;
+    }
+
+    .nav-item-active {
+        @apply bg-primary/10 text-primary;
+    }
+
+    /* Navbar */
+    .top-navbar {
+        @apply flex justify-between items-center p-4 md:px-6 bg-white shadow-soft rounded-sms mb-8;
+    }
+
+    /* Cards & Stats */
+    .card {
+        @apply bg-white rounded-sms p-6 shadow-soft transition-shadow duration-300 hover:shadow-hover;
+    }
+
+    .stats-grid {
+        @apply grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-8;
+    }
+
+    .stat-box {
+        @apply bg-white rounded-sms p-6 shadow-soft flex flex-col transition-all duration-300 hover:-translate-y-1 hover:shadow-hover;
+    }
+
+    .stat-title {
+        @apply text-sm text-textMuted font-medium;
+    }
+
+    .stat-value {
+        @apply text-3xl font-bold text-primary mt-2;
+    }
+
+    /* Forms */
+    .form-group {
+        @apply mb-5;
+    }
+
+    .form-label {
+        @apply block font-medium mb-2 text-sm text-textMain;
+    }
+
+    .form-input {
+        @apply w-full px-4 py-3 border border-gray-200 rounded-sms text-sm bg-gray-50 transition-all focus:outline-none focus:border-primary focus:bg-white focus:ring-4 focus:ring-primary/15;
+    }
+
+    /* Buttons */
+    .btn {
+        @apply inline-flex items-center justify-center px-6 py-3 font-semibold text-sm rounded-sms cursor-pointer transition-all duration-300;
+    }
+
+    .btn-primary {
+        @apply bg-gradient-primary text-white shadow-btn hover:-translate-y-0.5 hover:shadow-btn-hover;
+    }
+
+    .btn-accent {
+        @apply bg-gradient-accent text-white shadow-btn-accent hover:-translate-y-0.5 hover:shadow-btn-accent-hover;
+    }
+
+    /* Tables */
+    .table-wrapper {
+        @apply overflow-x-auto bg-white rounded-sms shadow-soft;
+    }
+
+    .data-table {
+        @apply w-full border-collapse text-left;
+    }
+
+    .data-table th {
+        @apply p-4 px-6 bg-primary/5 font-semibold text-textMuted border-b border-gray-100 text-sm;
+    }
+
+    .data-table td {
+        @apply p-4 px-6 border-b border-gray-100 text-sm group-hover:bg-primary/5;
+    }
+
+    .data-table tr {
+        @apply group transition-colors duration-200 hover:bg-primary/5;
+    }
+
+    /* Modal */
+    .modal-backdrop {
+        @apply fixed inset-0 bg-black/50 backdrop-blur-sm flex items-center justify-center z-50;
+    }
+
+    .modal-content {
+        @apply bg-white rounded-sms p-8 w-full max-w-lg shadow-hover animate-[modalSlideIn_0.3s_ease-out];
+    }
+
+    /* Feedback / Loaders */
+    .spinner {
+        @apply w-10 h-10 rounded-full border-[3px] border-primary/20 border-t-primary animate-spin inline-block;
+    }
+}
+
+@keyframes modalSlideIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

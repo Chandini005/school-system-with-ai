@@ -1,0 +1,24 @@
+{
+  "timestamp": "2026-03-30T08:49:34.017Z",
+  "studentId": "69c655d406b1e96a4301ca45",
+  "currentYear": "2025-2026",
+  "userRole": "Student",
+  "marksFound": 2,
+  "anyMarksFoundAtAll": false,
+  "sampleSheet": null,
+  "debugRecords": [
+    {
+      "examTitle": "fa-1",
+      "count": 9,
+      "lookingFor": "69c655d406b1e96a4301ca45",
+      "foundInSheet": true
+    },
+    {
+      "examTitle": "fa1",
+      "count": 9,
+      "lookingFor": "69c655d406b1e96a4301ca45",
+      "foundInSheet": true
+    }
+  ],
+  "resultsCount": 2
+}

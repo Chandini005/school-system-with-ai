@@ -1,0 +1,11 @@
+{
+  "ignore": [
+    "uploads/*",
+    "trace.json",
+    "node_modules/*",
+    "*.test.js",
+    "out.log",
+    "out2.log"
+  ],
+  "delay": "1500"
+}
